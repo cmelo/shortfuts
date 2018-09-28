@@ -1,91 +1,15 @@
 {
     "manifest_version": 2,
     "name": "shortfuts",
-    "description": "Exposes keyboard shortcuts for FIFA Ultimate Team (FUT) web app.",
-    "version": "4.4.0",
+    "description": "This app was requested by EA to be removed from the Chrome Web Store. Your choice to use this app may result in a ban from FIFA Ultimate Team.",
+    "version": "5.0.0",
     "browser_action": {
         "default_icon": "icon16.png",
         "default_popup": "popup.html"
-    },
-    "background": {
-        "scripts": [
-            "js/eventPage.js"
-        ],
-        "persistent": false
     },
     "icons": {
         "16": "icon16.png",
         "48": "icon48.png",
         "128": "icon128.png"
-    },
-    "commands": {
-        "command0": {
-            "description": "Toggles the extension on and off"
-        },
-        "command2": {
-            "description": "Stores current item in the club"
-        },
-        "command3": {
-            "description": "Buys the current item for BIN price"
-        },
-        "command4": {
-            "description": "Compares price of the current item with other items on the market"
-        },
-        "command5": {
-            "description": "Quick sells the current item"
-        },
-        "command6": {
-            "description": "Sends current item to transfer list"
-        },
-        "command7": {
-            "description": "Lists the current item for minimum BIN"
-        },
-        "command8": {
-            "description": "Lists the current item (with currently selected price range)"
-        },
-        "command9": {
-            "description": "Buys a bronze pack"
-        },
-        "command10": {
-            "description": "Quick sells all remaining items in pack"
-        },
-        "command11": {
-            "description": "Stores all remaining items in pack in the club"
-        },
-        "command12": {
-            "description": "Toggles current item's status on your transfer targets list"
-        },
-        "command13": {
-            "description": "Makes a bid on the current item"
-        },
-        "command14": {
-            "description": "Searches the transfer market"
-        },
-        "command15": {
-            "description": "Decrease minimum bid price"
-        },
-        "command16": {
-            "description": "Increase minimum bid price"
-        },
-        "command17": {
-            "description": "Decrease maximum bid price"
-        },
-        "command18": {
-            "description": "Increase maximum bid price"
-        }
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://www.easports.com/*fifa/ultimate-team/web-app/*"
-            ],
-            "js": [
-                "js/contentScript.js"
-            ]
-        }
-    ],
-    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-    "permissions": [
-        "storage"
-    ]
+    }
 }

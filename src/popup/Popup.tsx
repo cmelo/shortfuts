@@ -1,47 +1,16 @@
 import * as React from 'react';
-import Footer from './Footer';
-import Header from './Header';
-import ShortfutsList from './ShortfutsList';
-import { observable } from 'mobx';
-import { observer } from 'mobx-react';
 import './Popup.scss';
 
-@observer
 export default class Popup extends React.Component<{}, {}> {
-    @observable private isNativeShortcuts = true;
-
-    componentWillMount() {
-        chrome.storage.sync.get('isNativeShortcuts', data => {
-            if (
-                data.isNativeShortcuts ||
-                data.isNativeShortcuts === undefined
-            ) {
-                this.isNativeShortcuts = true;
-            } else {
-                this.isNativeShortcuts = false;
-            }
-        });
-    }
-
     render() {
         return (
-            <div className="popupContainer ms-Fabric">
-                <Header
-                    isNativeShortcuts={this.isNativeShortcuts}
-                    onShortcutsModeToggled={this.onShortcutsModeToggled}
-                />
-                <ShortfutsList isNativeShortcuts={this.isNativeShortcuts} />
-                <Footer showChangeShortfutsButton={this.isNativeShortcuts} />
+            <div style={{ padding: '12px' }} className="popupContainer">
+                <img style={{ width: '400px', height: '432px' }} src="/images/icarus.jpg" />
+                <div style={{ textAlign: 'center' }}>
+                    Icarus soared into the sky, but in the process he came too close to the sun,
+                    which due to the heat melted the wax.
+                </div>
             </div>
         );
     }
-
-    private onShortcutsModeToggled = (isNativeShortcuts: boolean) => {
-        chrome.storage.sync.set(
-            { isNativeShortcuts: isNativeShortcuts },
-            () => {
-                this.isNativeShortcuts = isNativeShortcuts;
-            }
-        );
-    };
 }

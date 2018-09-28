@@ -1,7 +1,7 @@
 {
     "name": "shortfuts",
-    "version": "4.4.0",
-    "description": "Exposes keyboard shortcuts for FIFA Ultimate Team (FUT) web app.",
+    "version": "5.0.0",
+    "description": "",
     "scripts": {
         "build": "./node_modules/.bin/webpack",
         "watch": "./node_modules/.bin/webpack -w"
@@ -22,10 +22,6 @@
         "webpack-cli": "^2.1.3"
     },
     "dependencies": {
-        "@uifabric/styling": "^5.21.0",
-        "mobx": "^4.1.1",
-        "mobx-react": "^5.0.0",
-        "office-ui-fabric-react": "^5.76.0",
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
     }
